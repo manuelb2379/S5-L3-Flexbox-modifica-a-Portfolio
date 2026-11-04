@@ -140,7 +140,7 @@ section {
   border-radius: 10px;
   background-color: #ffffff;
   padding: 20px;
-  scroll-margin-top: 500px; /*si mette quando si usa il bottone torna su altimenti la prima section va sotto l'header*/
+  scroll-margin-top: 250px; /*si mette quando si usa il bottone torna su altimenti la prima section va sotto l'header*/
 }
 
 section h2 {
@@ -542,4 +542,6 @@ label {
     margin-right: 6px;
     line-height: 0.5;
   }
+
+  
 }
