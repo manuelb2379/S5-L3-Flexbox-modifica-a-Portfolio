@@ -78,19 +78,21 @@ h3 {
 }
 /*nav*/
 #siteHeader nav ul {
-  display: inline-block;
+  display: flex;
   padding: 0 12px;
   margin: 0;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 nav ul li {
   padding: 10px;
   margin: 4px;
   border-radius: 4px;
-  display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  text-align: center;
+  /* text-align: center; */
   padding: 10px 15px;
   line-height: 1.2;
 }
@@ -139,7 +141,7 @@ section {
   border-radius: 10px;
   background-color: #ffffff;
   padding: 20px;
-  scroll-margin-top: 250px;/*si mette quando */
+  scroll-margin-top: 250px; /*si mette quando si usa il bottone torna su altimenti la prima section va sotto l'header*/
 }
 
 section h2 {
@@ -156,33 +158,7 @@ section h2 {
   margin: 0 auto;
 }
 
-/*prima lettera di chi-son
-.intro::first-letter {
-  font-family: "Playfair Display", Georgia, serif;
-  color: hsl(220, 60%, 25%);
-  font-size: 3rem;
-  font-weight: bold;
-  float: left;
-  margin-right: 6px;
-  line-height: 0.5;
-}
-nella prima in mobile non c'è*/
-
-/*tabella competenze*/
-.compTitle {
-  color: hsl(220, 30%, 40%);
-  font-style: italic;
-}
-
-#fLine {
-  text-align: center;
-  vertical-align: baseline;
-}
-
-.compTab {
-  color: hsl(220, 60%, 30%);
-  text-align: start;
-}
+/*tabella esperienza*/
 
 .table {
   width: 100%;
@@ -194,13 +170,7 @@ nella prima in mobile non c'è*/
 }
 
 .tableWrapper .table {
-  min-width: 480px;
-}
-
-#tableCom th {
-  width: 50%;
-  border-bottom: 1px solid #ece6d8;
-  background-color: #f9f5ea;
+  min-width: 320px;
 }
 
 .table td {
@@ -208,7 +178,7 @@ nella prima in mobile non c'è*/
   padding: 12px;
   border-bottom: 1px solid #ece6d8;
 }
-/*tabella esperienze*/
+
 #capE {
   color: hsl(220, 30%, 40%);
   font-style: italic;
@@ -225,40 +195,37 @@ nella prima in mobile non c'è*/
   width: 33.33%;
 }
 
-/*barre della tabella competenze
-.bar {
-  background-color: #ece6d8;
-  border-radius: 6px;
-  height: 12px;
-  width: 100%;
-  margin-top: 10px;
+/* Competenze */
+#bottoneCompetenze {
+  display: flex;
+  gap: 15px;
 }
 
-.bar-fill {
-  background-color: hsl(45, 90%, 50%);
-  height: 100%;
-  border-radius: 6px;
-}*/
-
-/*sistemazione celle di sx tabella competenze*/
-.blue {
-  margin-right: 12px;
-  color: #213e7b;
+.btnHtml,
+.btnCss,
+.btnGit,
+.btnVsCode {
+  padding: 10px;
+  background-color: hsl(220, 60%, 25%);
+  color: white;
+  border-radius: 25px;
 }
 
-.descr {
-  display: block;
-  margin-top: 10px;
-  font-style: italic;
-  color: #7e7868;
-  font-size: 0.9em;
+.btnHtml:hover,
+.btnCss:hover,
+.btnGit:hover,
+.btnVsCode:hover {
+  background-color: hsl(45, 90%, 60%);
+  color: black;
 }
 
 /* card progetti e link*/
-
 /*S5 L2 Project reso relative per spostare badge con position absolute*/
-.project {
-  position: relative;
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .project:nth-of-type(odd) {
@@ -464,7 +431,7 @@ label {
   background-color: gainsboro;
   padding: 25px;
   border-radius: 5px;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 .posizioneChiusura {
@@ -477,7 +444,7 @@ label {
   width: auto;
 }
 
-.posizioneChiusura:hover{
+.posizioneChiusura:hover {
   background-color: red;
   color: white;
 }
@@ -492,15 +459,14 @@ label {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#apriModale:hover{
-  background-color: #2F3A5D;
+#apriModale:hover {
+  background-color: #2f3a5d;
   cursor: pointer;
 }
 
-.chiudiModale{
+.chiudiModale {
   cursor: pointer;
 }
-
 
 /*inserimento media query per 768px S5 L1*/
 
@@ -522,13 +488,18 @@ label {
     margin: 0 20px;
   }
 
+  .project{
+    
+  }
+
   input,
   textarea,
-  select {
+  select,
+  .bottoneInvio {
     width: 60%;
   }
 
-  button {
+  .send {
     width: 50%;
   }
 
