@@ -202,6 +202,7 @@ section h2 {
 /* Competenze */
 #bottoneCompetenze {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -212,7 +213,7 @@ section h2 {
   padding: 10px;
   background-color: hsl(220, 60%, 25%);
   color: white;
-  border-radius: 25px;
+  border-radius: 25px; 
 }
 
 .btnHtml:hover,
@@ -221,6 +222,7 @@ section h2 {
 .btnVsCode:hover {
   background-color: hsl(45, 90%, 60%);
   color: black;
+  cursor: pointer;
 }
 
 /* card progetti e link*/
