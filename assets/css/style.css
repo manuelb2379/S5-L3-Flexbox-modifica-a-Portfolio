@@ -148,13 +148,18 @@ section h2 {
   color: hsl(220, 60%, 25%);
 }
 
-/*immagine del profilo*/
+/*sezione chiSono e immagine del profilo*/
+
+#chiSono {
+  display: flex;
+  flex-direction: column;
+}
+
 .avatar {
   width: 120px;
   height: 120px;
   border: 5px solid hsl(45, 90%, 60%);
   border-radius: 50%;
-  display: block;
   margin: 0 auto;
 }
 
@@ -222,12 +227,15 @@ section h2 {
 /* card progetti e link*/
 /*S5 L2 Project reso relative per spostare badge con position absolute*/
 
-article {
+.listaProgetti {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  gap: 20px;
 }
 
+.project {
+  position: relative; /* serve per il badge NEW con position:absolute */
+}
 .project:nth-of-type(odd) {
   border-left: 5px solid hsl(220, 60%, 30%);
   background-color: #f9f5ea;
@@ -483,13 +491,33 @@ label {
     padding: 32px;
   }
 
+  #chiSono {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #chiSono h2 {
+    width: 100%;
+  }
+
+  #chiSono div{
+    flex: 1;
+  }
+  
   .avatar {
-    float: left; /* l'avatar torna a sinistra del testo una volta che passa 768px*/
     margin: 0 20px;
   }
 
-  .project{
-    
+  .listaProgetti {
+    flex-direction: row;
+  }
+
+  .project {
+    width: 30%;
+  }
+
+  .listaProgetti a {
+    align-items: end;
   }
 
   input,
